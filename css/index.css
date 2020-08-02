@@ -1,0 +1,28 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #121618;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 300;
+  background: url(../img/body-bg.jpg) no-repeat fixed;
+  background-size: cover;
+}
+nav{
+  background-color: black;
+}
+.navbar-brand{
+  font-family: "Josefin Sans", Arial, sans-serif;
+}
+.flaticon-pizza-1,.navbar-brand small{
+  color: #fac564;
+}
+.flaticon-pizza-1{
+  font-size: 24px;
+}
+.navbar-brand small{
+  text-transform: uppercase;
+  font-size: 11px;
+  display: block;
+  text-align: center;
+  letter-spacing: 4px;
+}
