@@ -20,6 +20,29 @@ Pizza.prototype.pricePerSize=function(){
   }
 }
 
+Pizza.prototype.pizzaCrustPrice=function(){
+  switch(this.pizzaCrust){
+    case 'Crispy':
+    return 70
+    break
+    case 'Stuffed':
+    return 100
+    break
+    case 'Glutten free':
+    return 120
+    break
+    case 'Sicilian style':
+    return 120
+    break
+    case 'Flatbread Crust':
+    return 150
+    break
+    case 'Deep Dish Pizza':
+    return 170
+    break
+  }
+}
+
 $(document).ready(()=>{
   $('#to-be-delivered').click(()=>{
     $('#location-hide').show()
