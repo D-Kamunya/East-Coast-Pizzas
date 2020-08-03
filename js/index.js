@@ -163,6 +163,13 @@ $(document).ready(()=>{
     $('#location-hide').hide()
   })
 
+  $('#pizza-form input').click(()=>{
+    $('.order').hide()
+  })
+  $('#pizza-form select').click(()=>{
+    $('.order').hide()
+  })
+
   $('#pizza-form').submit((event)=>{
     event.preventDefault()
     
@@ -187,7 +194,8 @@ $(document).ready(()=>{
     let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
    
     let totalPrice=((newPizza.pricePerSize()+newPizza.pizzaCrustPrice()+newPizza.toppingsPrice())*pizzaQuantity)+newPizza.deliveryPrice()
-
+     
+    $('.order').show()
 
     $('.order-quantity').text('')
     $('.order-size').text('')
