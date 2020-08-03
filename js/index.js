@@ -6,6 +6,20 @@ const Pizza=function(size,crust,toppings,delivery){
   this.pizzaDelivery=delivery
 }
 
+Pizza.prototype.pricePerSize=function(){
+  switch(this.pizzaSize){
+    case 'Small':
+    return 200
+    break
+    case 'Medium':
+    return 400
+    break
+    case 'Large':
+    return 600
+    break
+  }
+}
+
 $(document).ready(()=>{
   $('#to-be-delivered').click(()=>{
     $('#location-hide').show()
@@ -35,6 +49,8 @@ $(document).ready(()=>{
 
     let pizzaDelivery=pizzaDeliveryFn()
 
+    let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
+  
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
