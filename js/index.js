@@ -28,10 +28,10 @@ Pizza.prototype.pizzaCrustPrice=function(){
     case 'Stuffed':
     return 100
     break
-    case 'Glutten free':
+    case 'Glutten Free':
     return 120
     break
-    case 'Sicilian style':
+    case 'Sicilian Style':
     return 120
     break
     case 'Flatbread Crust':
@@ -146,6 +146,7 @@ Pizza.prototype.toppingsPrice=function(){
   return toppingsPrize
 }
 
+
 Pizza.prototype.deliveryPrice=function(){
   if(this.pizzaDelivery===true){
     return 100
@@ -185,6 +186,8 @@ $(document).ready(()=>{
 
     let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
    
+    let totalPrice=((newPizza.pricePerSize()+newPizza.pizzaCrustPrice()+newPizza.toppingsPrice())*pizzaQuantity)+newPizza.deliveryPrice()
+    
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
