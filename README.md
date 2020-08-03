@@ -3,7 +3,7 @@
 #### This is a fictional pizza ordering website
 ![alt text](img/screenshots/sc1.png)
 
-![alt text](imgs/screenshots/sc2.png)
+![alt text](img/screenshots/sc2.png)
 
 #### By **DENNIS KAMUNYA**
 ## Versioning
