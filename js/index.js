@@ -146,6 +146,14 @@ Pizza.prototype.toppingsPrice=function(){
   return toppingsPrize
 }
 
+Pizza.prototype.deliveryPrice=function(){
+  if(this.pizzaDelivery===true){
+    return 100
+  }else{
+    return 0
+  }
+}
+
 $(document).ready(()=>{
   $('#to-be-delivered').click(()=>{
     $('#location-hide').show()
@@ -176,7 +184,7 @@ $(document).ready(()=>{
     let pizzaDelivery=pizzaDeliveryFn()
 
     let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
-    
+   
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
