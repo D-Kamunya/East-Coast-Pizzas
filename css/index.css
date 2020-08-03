@@ -49,7 +49,17 @@ nav{
   border: 1px solid #fac564;
   color: #000;
 }
-
+#about .about-img{
+  background: #161415 url(../img/about.jpg) no-repeat center;
+  background-size: cover;
+}
+#about p{
+  color: gray;
+}
+#about .icon{
+  font-size: 15px;
+  color: #fac564;
+}
 
 
 
