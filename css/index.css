@@ -87,6 +87,9 @@ nav{
 #contact li{
  list-style: none;
 }
+#location-hide{
+  display: none;
+}
 
 
 
