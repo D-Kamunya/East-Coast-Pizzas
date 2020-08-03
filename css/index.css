@@ -60,6 +60,22 @@ nav{
   font-size: 15px;
   color: #fac564;
 }
+#menu{
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/menu.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  color:#fff;
+}
+#menu h3{
+  text-decoration: underline;
+}
+#menu .title{
+  color: #bfbfbf;
+  font-size: 18px;
+}
+#menu .price{
+  color: #fac564;
+}
 
 
 
