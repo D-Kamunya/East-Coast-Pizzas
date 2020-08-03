@@ -12,7 +12,7 @@ body {
 nav{
   background-color: black;
 }
-.navbar-brand{
+.navbar-brand,h1{
   font-family: "Josefin Sans", Arial, sans-serif;
 }
 .flaticon-pizza-1,.navbar-brand small{
@@ -39,3 +39,43 @@ nav{
   margin: auto;
   padding-top: 15%;
 }
+.banner .heading{
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 30px;
+  color: #fac564;
+}
+.banner .btn-primary{
+  background: #fac564;
+  border: 1px solid #fac564;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
