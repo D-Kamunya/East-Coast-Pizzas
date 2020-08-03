@@ -187,7 +187,24 @@ $(document).ready(()=>{
     let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
    
     let totalPrice=((newPizza.pricePerSize()+newPizza.pizzaCrustPrice()+newPizza.toppingsPrice())*pizzaQuantity)+newPizza.deliveryPrice()
-    
+
+
+    $('.order-quantity').text('')
+    $('.order-size').text('')
+    $('.order-crust').text('')
+    $('.order-dfees').text('')
+    $('.order-toppings').text('')
+
+
+    $('.order-quantity').text(pizzaQuantity)
+    $('.order-size').text(`${pizzaSize} .... ${newPizza.pricePerSize()}`)
+    $('.order-crust').text(`${pizzaCrust} .... ${newPizza.pizzaCrustPrice()}`)
+    $('.order-dfees').text(`Kshs ${newPizza.deliveryPrice()}`)
+    newPizza.pizzaToppings.map(topping=>{
+      $('.order-toppings').append(topping + ' ')
+    })
+    $('.order-toppings').append(` .... ${newPizza.toppingsPrice()}`)
+    $('.order-total').text(totalPrice)
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
