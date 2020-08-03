@@ -43,6 +43,109 @@ Pizza.prototype.pizzaCrustPrice=function(){
   }
 }
 
+Pizza.prototype.toppingsPrice=function(){
+  let toppingsPrize=0
+  if(this.pizzaSize==='Small'){
+    this.pizzaToppings.map(topping=>{
+      switch(topping){
+        case 'Mushrooms':
+          toppingsPrize+=80
+          break
+        case 'Onions':
+          toppingsPrize+=40
+          break
+        case 'Sausage':
+          toppingsPrize+=80
+          break
+        case 'Bacon':
+          toppingsPrize+=150
+          break
+        case 'Extra cheese':
+          toppingsPrize+=130
+          break
+        case 'Black olives':
+          toppingsPrize+=120
+          break
+        case 'Green peppers':
+          toppingsPrize+=100
+          break
+        case 'Pineapple':
+          toppingsPrize+=70
+          break    
+       case 'Spinach':
+          toppingsPrize+=50
+          break                  
+      }
+    })
+  }else if(this.pizzaSize==='Medium'){
+    this.pizzaToppings.map(topping=>{
+      switch(topping){
+        case 'Mushrooms':
+          toppingsPrize+=100
+          break
+        case 'Onions':
+          toppingsPrize+=50
+          break
+        case 'Sausage':
+          toppingsPrize+=100
+          break
+        case 'Bacon':
+          toppingsPrize+=170
+          break
+        case 'Extra cheese':
+          toppingsPrize+=150
+          break
+        case 'Black olives':
+          toppingsPrize+=160
+          break
+        case 'Green peppers':
+          toppingsPrize+=120
+          break
+        case 'Pineapple':
+          toppingsPrize+=100
+          break    
+       case 'Spinach':
+          toppingsPrize+=70
+          break                  
+      }
+    })
+  }else{
+    this.pizzaToppings.map(topping=>{
+      switch(topping){
+        case 'Mushrooms':
+          toppingsPrize+=120
+          break
+        case 'Onions':
+          toppingsPrize+=70
+          break
+        case 'Sausage':
+          toppingsPrize+=120
+          break
+        case 'Bacon':
+          toppingsPrize+=180
+          break
+        case 'Extra cheese':
+          toppingsPrize+=170
+          break
+        case 'Black olives':
+          toppingsPrize+=170
+          break
+        case 'Green peppers':
+          toppingsPrize+=150
+          break
+        case 'Pineapple':
+          toppingsPrize+=120
+          break    
+        case 'Spinach':
+            toppingsPrize+=100
+            break                  
+      }
+    })
+
+  }
+  return toppingsPrize
+}
+
 $(document).ready(()=>{
   $('#to-be-delivered').click(()=>{
     $('#location-hide').show()
@@ -73,7 +176,7 @@ $(document).ready(()=>{
     let pizzaDelivery=pizzaDeliveryFn()
 
     let newPizza=new Pizza(pizzaSize,pizzaCrust,pizzaToppings,pizzaDelivery)
-  
+    
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
