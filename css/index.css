@@ -15,7 +15,7 @@ nav{
 .navbar-brand,h1,h2,h3{
   font-family: "Josefin Sans", Arial, sans-serif;
 }
-.flaticon-pizza-1,.flaticon-pizza,.navbar-brand small{
+.flaticon-pizza-1,.flaticon-pizza,.navbar-brand small,#contact .icon{
   color: #fac564;
 }
 .flaticon-pizza-1{
@@ -76,6 +76,18 @@ nav{
 #menu .price{
   color: #fac564;
 }
+#contact .icon{
+  font-size: 50px;
+  margin-right: 1rem;
+}
+#contact p{
+  color: #bfbfbf;
+}
+
+#contact li{
+ list-style: none;
+}
+
 
 
 
