@@ -29,6 +29,7 @@ $(document).ready(()=>{
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
+        alert(`Your order will be delivered to your location ${pizzaLocation}`)
     }
     
 
