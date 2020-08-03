@@ -1,3 +1,11 @@
+const Pizza=function(size,crust,toppings,delivery){
+  'use strict'; 
+  this.pizzaSize=size
+  this.pizzaCrust=crust
+  this.pizzaToppings=toppings
+  this.pizzaDelivery=delivery
+}
+
 $(document).ready(()=>{
   $('#to-be-delivered').click(()=>{
     $('#location-hide').show()
@@ -26,18 +34,12 @@ $(document).ready(()=>{
     }
 
     let pizzaDelivery=pizzaDeliveryFn()
+
     let pizzaLocation
     if(pizzaDelivery===true){
         pizzaLocation=$('#delivery-location').val()
         alert(`Your order will be delivered to your location ${pizzaLocation}`)
     }
-    
-
-    console.log(pizzaDelivery);
-    console.log(pizzaToppings);
-    console.log(pizzaQuantity);
-    console.log(pizzaSize);
-    console.log(pizzaCrust);
-    console.log(pizzaLocation);
+   
   })
 })
