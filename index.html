@@ -39,7 +39,7 @@
 				<span class="heading">Welcome</span>
 				<h1 class="mb-4">First there’s love, then there’s pizza</h1>
 				<p class="mb-4 mb-md-5">Fresh, natural, and locally sourced ingredients…amazing pizza.It’s not just pizza, it’s an experience.</p>
-				<p><a href="#" class="btn btn-primary m-2">Order Now</a> <a href="#" class="btn btn-outline-primary text-white m-2">View Menu</a></p>
+				<p><a href="#" data-toggle="modal" data-target="#pizzaForm" class="btn btn-primary m-2">Order Now</a> <a href="#menu" class="btn btn-outline-primary text-white m-2">View Menu</a></p>
 			</div>
 		</section> 
 
@@ -137,6 +137,79 @@
     		</div>
     	</div>
 		</section>
+
+		<div class="modal fade" id="pizzaForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Pizza Form</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="pizza-form">
+							<label>
+								Quantity:
+								<input type="number" class="form-control" id="pizza-quantity" min="1" required>
+							</label>
+							<br>
+							<label>
+								Pizza Size:
+								<select class="form-control drop" id="pizza-size" required>
+									<option>Small</option>
+									<option>Medium</option>
+									<option>Large</option>
+								</select>
+							</label>
+							<br>
+							<label>
+								Crust Type:
+								<select class="form-control drop" id="pizza-crust"  required>
+									<option>Crispy</option>
+									<option>Stuffed</option>
+									<option>Glutten</option>
+									<option>Sicilian Style</option>
+									<option>Flatbread Crust</option>
+									<option>Deep Dish Pizza</option>
+								</select>
+							</label>
+							<br>
+							<label>
+								Toppings Options:
+								<select class="form-control drop" id="pizza-toppings" multiple required>
+									<option>Mushrooms</option>
+									<option>Onions</option>
+									<option>Sausage</option>
+									<option>Bacon</option>
+									<option>Extra Cheese</option>
+									<option>Black olives</option>
+									<option>Green peppers</option>
+									<option>Pineapple</option>
+									<option>Spinach</option>
+								</select>
+							</label>
+							<div class="form-check">
+								<label for="delivery-options">
+									Delivery:
+									<input type="radio" class="delivery" name="delivery-options" value="delivery" id="to-be-delivered" required>
+								</label>
+								<label for="delivery-options">
+									Pick Up:
+									<input type="radio" class="delivery" name="delivery-options" value="pickup" id="to-be-picked" required>
+								</label>
+								<br>
+								<label id="location-hide">
+									<input type="text" class="form-control box" placeholder="Deliver To" id="delivery-location">
+								</label>
+							</div>
+							<input type="submit" class="btn btn-primary" id="getTotal" value="Order">
+							<button type="button" class="btn btn-primary" id="checkout" data-dismiss="modal"><i class="fa fa-money" aria-hidden="true"></i> Checkout</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		
 		<script src="js/jquery-3.5.1.min.js"></script>
